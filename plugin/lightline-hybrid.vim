@@ -32,6 +32,7 @@ let s:c_red    = 9
 let s:c_green  = 10
 let s:c_blue   = 12
 let s:c_orange = 3
+let s:dark_blue = '#515f6d'
 
 
 let s:p = {
@@ -83,7 +84,8 @@ let s:p.inactive.left = [
 
 let s:p.insert.left = [
 			\ [s:mono0, s:blue, s:c_mono0, s:c_blue],
-			\ s:p.normal.left[1]]
+			\ [s:mono5, s:dark_blue, s:c_mono5, s:c_mono3]]
+			" INSERT 時の2段階目の色を変えてわかりやすく
 let s:p.replace.left = [
 			\ [s:mono0, s:red, s:c_mono0, s:c_red],
 			\ s:p.normal.left[1]]
