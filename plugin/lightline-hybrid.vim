@@ -15,24 +15,28 @@ else
 	let s:mono4 = '#707880'
 endif
 
-let s:mono2   = '#303030'
+let s:mono2   = '#24262a'
 let s:mono5   = '#c5c8c6'
 let s:c_mono0 = 234
-let s:c_mono1 = 0
-let s:c_mono2 = 236
-let s:c_mono3 = 8
-let s:c_mono4 = 7
+let s:c_mono1 = 236
+let s:c_mono2 = 235
+let s:c_mono3 = 238
+let s:c_mono4 = 243
 let s:c_mono5 = 15
 
-let s:red      = '#cc6666'
-let s:green    = '#b5bd68'
-let s:blue     = '#81a2be'
-let s:orange   = '#de935f'
-let s:c_red    = 9
-let s:c_green  = 10
-let s:c_blue   = 12
-let s:c_orange = 3
-let s:dark_blue = '#515f6d'
+let s:red          = '#cc6666'
+let s:green        = '#b5bd68'
+let s:blue         = '#81a2be'
+let s:orange       = '#de935f'
+let s:dark_blue1   = '#4d5a66'
+let s:dark_blue2   = '#353c44'
+let s:c_red        = 9
+let s:c_green      = 143
+let s:c_blue       = 75
+let s:c_orange     = 215
+let s:c_dark_blue1 = 32
+let s:c_dark_blue2 = 24
+let s:c_light_gray = 250
 
 
 let s:p = {
@@ -66,6 +70,16 @@ else
 	let s:p.normal.right = [
 				\ [s:mono0, s:mono4, s:c_mono0, s:c_mono4],
 				\ [s:mono0, s:mono4, s:c_mono0, s:c_mono4]]
+	let s:p.insert.middle = [
+				\ [s:mono5, s:dark_blue2, s:c_blue, s:c_dark_blue2]]
+	let s:p.insert.right = [
+				\ [s:mono0, s:mono5, s:c_mono0, s:c_light_gray],
+				\ [s:mono0, s:mono5, s:c_mono0, s:c_light_gray]]
+	let s:p.replace.middle = [
+				\ [s:mono4, s:mono1, s:c_mono4, s:c_mono1]]
+	let s:p.replace.right = [
+				\ [s:mono0, s:mono4, s:c_mono0, s:c_mono4],
+				\ [s:mono0, s:mono4, s:c_mono0, s:c_mono4]]
 endif
 
 let s:p.normal.error = [
@@ -84,7 +98,7 @@ let s:p.inactive.left = [
 
 let s:p.insert.left = [
 			\ [s:mono0, s:blue, s:c_mono0, s:c_blue],
-			\ [s:mono5, s:dark_blue, s:c_mono5, s:c_mono3]]
+			\ [s:mono5, s:dark_blue1, s:c_mono5, s:c_dark_blue1]]
 			" INSERT 時の2段階目の色を変えてわかりやすく
 let s:p.replace.left = [
 			\ [s:mono0, s:red, s:c_mono0, s:c_red],
@@ -104,7 +118,8 @@ if s:style == 'plain'
 				\ [s:mono5, s:mono0, s:c_mono5, s:c_mono0]]
 else
 	let s:p.tabline.middle = [
-				\ [s:mono0, s:mono4, s:c_mono0, s:c_mono4]]
+				\ [s:mono5, s:dark_blue2, s:c_blue, s:c_dark_blue2]]
+				"\ [s:mono0, s:mono4, s:c_mono0, s:c_mono4]]
 	let s:p.tabline.right = [
 				\ [s:mono4, s:mono1, s:c_mono4, s:c_mono1],
 				\ [s:mono0, s:mono4, s:c_mono0, s:c_mono4]]
