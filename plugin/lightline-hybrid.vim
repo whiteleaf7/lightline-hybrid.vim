@@ -15,14 +15,15 @@ else
 	let s:mono4 = '#707880'
 endif
 
-let s:mono2   = '#24262a'
-let s:mono5   = '#c5c8c6'
-let s:c_mono0 = 234
-let s:c_mono1 = 236
-let s:c_mono2 = 235
-let s:c_mono3 = 238
-let s:c_mono4 = 243
-let s:c_mono5 = 15
+let s:mono2    = '#24262a'
+let s:mono4_hi = '#9fa4a6'
+let s:mono5    = '#c5c8c6'
+let s:c_mono0  = 234
+let s:c_mono1  = 236
+let s:c_mono2  = 235
+let s:c_mono3  = 238
+let s:c_mono4  = 243
+let s:c_mono5  = 15
 
 let s:red          = '#cc6666'
 let s:green        = '#b5bd68'
@@ -63,7 +64,7 @@ if s:style == 'plain'
 				\ [s:mono0, s:mono4, s:c_mono0, s:c_mono4]]
 else
 	let s:p.normal.middle = [
-				\ [s:mono4, s:mono1, s:c_mono4, s:c_mono1]]
+				\ [s:mono4_hi, s:mono1, s:c_mono4, s:c_mono1]]
 	let s:p.normal.left = [
 				\ [s:mono0, s:green, s:c_mono0, s:c_green],
 				\ [s:mono5, s:mono3, s:c_mono5, s:c_mono3]]
