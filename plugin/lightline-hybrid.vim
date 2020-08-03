@@ -4,15 +4,16 @@
 
 " Color palette from vim-hybrid
 if exists('g:hybrid_reduced_contrast') && g:hybrid_reduced_contrast == 1
-	let s:mono0 = '#232c31'
-	let s:mono1 = '#2d3c46'
-	let s:mono3 = '#425059'
-	let s:mono4 = '#6c7a80'
+    let s:mono0 = '#232c31'
+    let s:mono1 = '#2d3c46'
+    let s:mono3 = '#425059'
+    " let s:mono4 = '#6c7a80'
+    let s:mono4 = '#657278'
 else
-	let s:mono0 = '#1d1f21'
-	let s:mono1 = '#282a2e'
-	let s:mono3 = '#373b41'
-	let s:mono4 = '#707880'
+    let s:mono0 = '#1d1f21'
+    let s:mono1 = '#282a2e'
+    let s:mono3 = '#373b41'
+    let s:mono4 = '#707880'
 endif
 
 let s:mono2    = '#24262a'
@@ -29,8 +30,10 @@ let s:red          = '#cc6666'
 let s:green        = '#b5bd68'
 let s:blue         = '#81a2be'
 let s:orange       = '#de935f'
-let s:dark_blue1   = '#4d5a66'
-let s:dark_blue2   = '#353c44'
+let s:dark_blue1   = '#5c6e80'
+" #4d5a66
+let s:dark_blue2   = '#425059'
+" let s:dark_blue2   = '#353c44'
 let s:c_red        = 9
 let s:c_green      = 143
 let s:c_blue       = 75
@@ -69,8 +72,8 @@ else
 				\ [s:mono0, s:green, s:c_mono0, s:c_green],
 				\ [s:mono5, s:mono3, s:c_mono5, s:c_mono3]]
 	let s:p.normal.right = [
-				\ [s:mono0, s:mono4, s:c_mono0, s:c_mono4],
-				\ [s:mono0, s:mono4, s:c_mono0, s:c_mono4]]
+				\ [s:mono0, s:mono4_hi, s:c_mono0, s:c_mono4],
+				\ [s:mono0, s:mono4_hi, s:c_mono0, s:c_mono4]]
 	let s:p.insert.middle = [
 				\ [s:mono5, s:dark_blue2, s:c_blue, s:c_dark_blue2]]
 	let s:p.insert.right = [
@@ -119,13 +122,13 @@ if s:style == 'plain'
 				\ [s:mono5, s:mono0, s:c_mono5, s:c_mono0]]
 else
 	let s:p.tabline.middle = [
-				\ [s:mono5, s:dark_blue2, s:c_blue, s:c_dark_blue2]]
+				\ [s:mono5, s:mono3, s:c_mono5, s:c_mono3]]
 				"\ [s:mono0, s:mono4, s:c_mono0, s:c_mono4]]
 	let s:p.tabline.right = [
 				\ [s:mono4, s:mono1, s:c_mono4, s:c_mono1],
 				\ [s:mono0, s:mono4, s:c_mono0, s:c_mono4]]
 	let s:p.tabline.left = [
-				\ [s:mono4, s:mono1, s:c_mono4, s:c_mono1]]
+				\ [s:mono4_hi, s:mono1, s:c_mono4, s:c_mono1]]
 	let s:p.tabline.tabsel = [
 				\ [s:mono5, s:mono0, s:c_mono5, s:c_mono0]]
 endif
